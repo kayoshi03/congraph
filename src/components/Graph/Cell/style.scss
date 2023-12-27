@@ -46,6 +46,11 @@
   }
 
 }
+.clicked {
+  width: 13px;
+  height: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.90) !important;
+}
 .cell:hover{
   width: 13px;
   height: 13px;

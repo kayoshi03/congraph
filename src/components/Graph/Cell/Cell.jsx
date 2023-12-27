@@ -6,6 +6,8 @@ const Cell = ({ x, con, arr }) => {
     const [score, setScore] = useState(0)
     const [showTool, setShowTool] = useState(false)
 
+    moment.locale('ru')
+
     useEffect(() => {
         if (con) {
             const state = arr[con];
@@ -26,17 +28,26 @@ const Cell = ({ x, con, arr }) => {
     const onClose = () => {
         setShowTool(false)
     }
+    const dayWeek = moment(x).format("dddd").split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1));
+    const Mouths = moment(x).format("MMMM").split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1));
+    const day = moment(x).format("D").split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1));
+    const year = moment(x).format("Y").split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1));
+    const string = dayWeek + ", " + Mouths + " " + day + ", " + year
+    console.log(string)
+
+
 
 
 
     return (
-        <td onBlur={onClose} onClick={showToolTip} className={`cell ${color}`}>
-            {/*{new Date(x).toLocaleDateString()}*/}
+        <td onBlur={onClose} onClick={showToolTip} className={`cell ${color} ${showTool ? "clicked" : ""}`}>
             {
                 showTool ?
                     <div className="tooltip">
                         <h1>{score} contributions </h1>
-                        <p>{moment(x).format("dddd, MMMM DD, y")}</p>
+                        <p>
+                            {string}
+                        </p>
                         <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path id="corner" d="M4.5 6L0.169873 1.38009e-07L8.83013 8.95112e-07L4.5 6Z" fill="black"/>
                         </svg>

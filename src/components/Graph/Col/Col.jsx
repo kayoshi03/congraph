@@ -1,11 +1,12 @@
 import React from 'react';
 import Cell from "../Cell/Cell";
 import moment from "moment/moment";
+import 'moment/locale/ru'
 
 const Col = ({weeks, contribution}) => {
     const dayNames = ["ПН","","СР","", "ПТ"]
     const mouth = ["Янв","Февр","Март","Апр","Май","Июнь","Июль","Авг","Сент","Окт","Нояб","Дек"]
-
+    moment.locale('ru')
     return (
         <table className="col">
             <thead>
