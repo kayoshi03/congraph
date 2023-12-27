@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.testCon {
+  p {
+    color: #959494;
+
+    font-family: Inter;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  .listCell {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  margin-top: 15px;
+  margin-left: 20px;
+}
+.col {
+  thead {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5px;
+    p {
+      color: #959494;
+
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  tr {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 2px;
+    p {
+      color: #959494;
+
+      width: 20px;
+
+      text-align: center;
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}

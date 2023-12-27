@@ -1,0 +1,73 @@
+.cell {
+  width: 15px;
+  height: 15px;
+  background: gray;
+  position: relative;
+  .tooltip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 5px;
+    top: -430%;
+    left: -500%;
+    width: 145px;
+    height: 42px;
+    background: black;
+    border-radius: 3px;
+    z-index: 101;
+    h1 {
+      text-align: center;
+      color: #EDEDED;
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    p {
+      width: 100%;
+      text-align: center;
+      color: #7C7C7C;
+      //display: flex;
+      font-family: Inter;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    svg {
+      position: absolute;
+      top: 100%;
+      left: 43.5%;
+
+    }
+  }
+
+}
+.cell:hover{
+  width: 13px;
+  height: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.50);
+}
+
+.none {
+  background: #EDEDED !important;
+}
+
+.con {
+  background: #ACD5F2 !important;
+}
+
+.con10 {
+  background: #7FA8C9 !important;
+}
+
+.con20 {
+  background: #527BA0 !important;
+}
+
+.con30 {
+  background: #254E77 !important;
+}
